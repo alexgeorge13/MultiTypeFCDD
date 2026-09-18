@@ -148,6 +148,6 @@ python visualize_anomalies.py
 ```
 
 This generates a sub-plot comparison grid saved as `visualized_sample_<VISUALIZATION_SAMPLE_IDX>_<OBJECT_NAME>.png` (where `<OBJECT_NAME>` is automatically retrieved from the dataset based on the selected index) mapping input data directly alongside predicted anomaly segments and ground truth boundaries.
-An example is shown below:
+An example is shown below `(visualized_sample_926_audiojack.png)`:
 
 ![Image Description](visualized_sample_926_audiojack.png)
