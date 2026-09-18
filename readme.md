@@ -80,7 +80,8 @@ Download the **Real-IAD dataset** and its associated JSON metadata files.
         ├── verify_dataset.py  
         ├── check_model.py           
         ├── train.py                 
-        ├── evaluate.py              
+        ├── evaluate.py
+        ├── list_indices.py          
         ├── visualize_anomalies.py
         ├── readme.md
         └── requirements.txt
@@ -135,9 +136,18 @@ python evaluate.py
 
 ### Step 4: Class-Specific Heatmap Visualization
 
-Generate the comprehensive side-by-side verification grid for structural defects. The image target index is controlled inside `config.py` by setting `VISUALIZATION_SAMPLE_IDX`. This generates a sub-plot comparison grid saved as `visualized_sample_<IDX>.png` mapping input data directly alongside predicted anomaly segments and ground truth boundaries.
+Before heatmap visualisation, run the following code to generate a text file named `test_indices_by_class.txt`. This contains the list of indices grouped by the defect code.
+
+```
+python list_indices.py
+```
+Select the desired image index and assign it to `VISUALIZATION_SAMPLE_IDX` inside `config.py`. Then, run the visualisation script to generate the heatmap visualisations.
 
 ```
 python visualize_anomalies.py
 ```
 
+This generates a sub-plot comparison grid saved as `visualized_sample_<VISUALIZATION_SAMPLE_IDX>_<OBJECT_NAME>.png` (where `<OBJECT_NAME>` is automatically retrieved from the dataset based on the selected index) mapping input data directly alongside predicted anomaly segments and ground truth boundaries.
+An example is shown below:
+
+![Image Description](visualized_sample_926_audiojack.png)
