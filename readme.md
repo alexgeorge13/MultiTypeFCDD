@@ -1,6 +1,6 @@
 # PyTorch implementation of MultiTypeFCDD
 
-This notebook provides demo code for **MultiTypeFCDD**, including training and testing the model, producing anomaly heatmaps for multi-type anomaly detection.
+This repository provides demo code for **MultiTypeFCDD**, including training and testing the model, producing anomaly heatmaps for multi-type anomaly detection.
 We experiment on the Real-IAD dataset, which contains **30 object categories** and **8 anomaly types**.
 
 For this demo, we follow the **default settings used in the paper**. Specifically, we employ an **Inception-ResNet-v2** backbone trained on the ImageNet database with an input size of **299×299**, using only the first three downsampling stages of the encoder. All backbone layers are kept **frozen** to retain the generic ImageNet-trained feature representations.
