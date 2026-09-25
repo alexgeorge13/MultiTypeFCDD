@@ -1,4 +1,4 @@
-# PyTorch implementation of MultiTypeFCDD
+# MultiTypeFCDD
 
 This repository provides the demo code for **MultiTypeFCDD**, including training and testing the model, producing anomaly heatmaps for multi-type anomaly detection.
 We experiment on the Real-IAD dataset, which contains **30 object categories** and **8 anomaly types**.
